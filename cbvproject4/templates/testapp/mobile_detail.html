@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block content%}
+<div class="container">
+  <h1>Details of the {{mobile.brand}} smartphone</h1>
+  <ul>
+    <li>Model:{{mobile.brand}}</li>
+    <li>Ram:{{mobile.ram}}</li>
+    <li>Camera:{{mobile.camera}}</li>
+    <li>Price:{{mobile.price}}</li>
+  </ul>
+</div>
+{%endblock%}

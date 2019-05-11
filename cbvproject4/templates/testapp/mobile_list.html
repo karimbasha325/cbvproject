@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+{%block content%}
+<div class="container" align="center">
+  <h1>List of the smartphones in our stock</h1>
+  <table border="5">
+    <thead>
+      <th>Brand</th>
+      <th>Details</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </thead>
+    {%for mobile in mobile_list%}
+    <tr>
+      <td>{{mobile.brand}}</td>
+      <td><a href="/{{mobile.id}}">Detail</a></td>
+      <td><a href="/update/{{mobile.id}}">Update</a></td>
+      <td><a href="/delete/{{mobile.id}}">Delete</a></td>
+    </tr>
+    {%endfor%}
+  </table>&nbsp&nbsp&nbsp <br>
+  <a href="/create" class="btn btn-primary btn-lg">Enter new mobile into your stock</a>
+</div>
+{%endblock%}
